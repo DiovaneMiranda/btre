@@ -1,5 +1,5 @@
 from django.db import models
-from realtor.models import Realtor
+from realtors.models import Realtor
 from datetime import datetime
 
 class Listing(models.Model):
@@ -14,7 +14,7 @@ class Listing(models.Model):
     bedrooms = models.IntegerField()
     bathrooms = models.DecimalField(max_digits=2, decimal_places=1)
     garage = models.IntegerField(default=0)
-    sqft = models.Integer()
+    sqft = models.IntegerField()
     lot_size = models.DecimalField(max_digits=5, decimal_places=1)
     photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/')
     photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
